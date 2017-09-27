@@ -257,6 +257,7 @@ namespace PruebaBT1.Droid.OBD2
 
 
             string data = "";
+            
             try
 
             {
