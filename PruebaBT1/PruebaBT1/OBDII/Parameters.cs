@@ -28,6 +28,7 @@ namespace PruebaBT1.OBD2
             FuelTrim_Banl1_Long = 0x07,
             FuelTrim_Bank2_Short = 0x08,
             FuelTrim_Bank2_Long = 0x09,
+            MAFAirFlowRate=0x10,
             FuelPressure = 0x0A,
             IntakeManifoldAbsolutePressure=0x0B,
             RPM = 0x0C,
@@ -54,6 +55,15 @@ namespace PruebaBT1.OBD2
             CatalystTemperature_Bank2_Sensor2 = 0x3F,
             RelativeThrottlePosition=0x45,
             EngineOilTemperature=0x5C,
+            FuelInjectionTiming=0x5D,
+            EngineFuelRate=0x0E,
+            DriverDemandEngine_PercentTorque=0x61,
+            ActualEngine_PercentTorque=0x62,
+            EngineReferenceTorque=0x63,
+            EnginePercentTorqueData=0x64,
+
+
+
 
 
 

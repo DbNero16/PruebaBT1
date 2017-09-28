@@ -85,6 +85,7 @@ namespace PruebaBT1.Droid
             try
             {
                 return device.SetPin(PinToByteArray(pin));
+                
             }
             catch
             {

@@ -60,7 +60,7 @@ namespace PruebaBT1.Droid.OBD2
 
         public DiagnosticTroubleCode(string code)
         {
-            Code = System.Text.Encoding.Default.GetBytes(code);
+            Code = Encoding.Unicode.GetBytes(code);
         }
 
         public DiagnosticTroubleCode(Byte[] code)

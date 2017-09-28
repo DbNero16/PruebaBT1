@@ -181,12 +181,9 @@
     <Compile Include="BroadcastReceiverClass.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="OBD2\Connection.cs" />
-    <Compile Include="OBD2\DataResponse.cs" />
-    <Compile Include="OBD2\DiagnosticTroubleCode.cs" />
     <Compile Include="OBD2\Exception\NoDataException.cs" />
     <Compile Include="OBD2\Exception\ResponseException.cs" />
     <Compile Include="OBD2\IConnection.cs" />
-    <Compile Include="OBD2\Parameters.cs" />
     <Compile Include="OBD2\Exception\UnableToConnectException.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

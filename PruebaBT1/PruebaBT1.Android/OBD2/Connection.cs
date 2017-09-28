@@ -86,33 +86,43 @@ namespace PruebaBT1.Droid.OBD2
             
 
             DataResponse dr = new DataResponse(dataFilter, pid, Parameters.ConsultMode.CurrentData);
-          
 
-            if (pid == Parameters.PID.Speed)
+            switch (pid)
             {
-                result = (Speed(dr)).ToString(); 
-                
-            } else 
-            if(pid== Parameters.PID.RPM)
-            {
-                result = (RMP(dr)).ToString();
-            }
-            else
-            if (pid == Parameters.PID.EngineTemperature)
-            {
-                result = (EngineTemperature(dr)).ToString();
-            }
-            else
-            if (pid == Parameters.PID.FuelPressure)
-            {
-                result = (FuelPressure(dr)).ToString();
-            }
-            else
-            if (pid == Parameters.PID.ThrottlePosition)
-            {
-                result = (FuelPressure(dr)).ToString();
+
+                case Parameters.PID.Speed:
+
+                    result = (Speed(dr)).ToString();
+                    break;
+
+                case Parameters.PID.RPM:
+
+                    result = (RMP(dr)).ToString();
+                    break;
+
+                case Parameters.PID.EngineTemperature:
+
+                    result = (EngineTemperature(dr)).ToString();
+                    break;
+
+                case Parameters.PID.FuelPressure:
+
+                    result = (FuelPressure(dr)).ToString();
+                    break;
+
+                case Parameters.PID.ThrottlePosition:
+                    result = (FuelPressure(dr)).ToString();
+                    break;
+
+                default:
+                    break;
+
             }
             
+           
+          
+          
+           
             Thread.Sleep(200);
             // return new DataResponse(result, pid, Parameters.ConsultMode.CurrentData);            
         }
@@ -126,10 +136,10 @@ namespace PruebaBT1.Droid.OBD2
             string send = (Convert.ToUInt32(Parameters.ConsultMode.DiagnosticTroubleCodes).ToString("X2"));
             byte[] cmd = Encoding.ASCII.GetBytes(send);
             socket.OutputStream.Write(cmd, 0, cmd.Length);
-            Thread.Sleep(1000);
+            Thread.Sleep(100);
             string result = "";
             string data = Read();
-            Thread.Sleep(1000);
+            Thread.Sleep(100);
             if (data != null)
             {
                 socket.OutputStream.Flush();
@@ -426,7 +436,7 @@ namespace PruebaBT1.Droid.OBD2
                 throttlePosition = throttlePositionRes
 
             });
-            Console.WriteLine("ThrottlePosition añadida: " + throttlePosition + " rowAdded: " + rowAdded);
+            Console.WriteLine("ThrottlePosition añadida: " + throttlePositionRes + " rowAdded: " + rowAdded);
             return throttlePositionRes;
             // return (dr.Value.Length>=1) ? (Convert.ToUInt32(dr.Value.First()) * 100) / 255 : 0;
         }

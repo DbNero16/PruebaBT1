@@ -53,6 +53,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OBDII\DataResponse.cs" />
+    <Compile Include="OBDII\DiagnosticTroubleCode.cs" />
+    <Compile Include="OBDII\Parameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
